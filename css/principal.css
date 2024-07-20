@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+
+* {
+    margin: 0 auto;
+    font-family: "Nixie One", system-ui;
+    font-weight: 1000;
+}
+
+body {
+    
+    background-image: url(../imgs/benee.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    backdrop-filter: brightness(20%);
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 50%;
+    background-color: aliceblue;
+    border-radius: 20px;
+    transition: 1s ease-in;
+}
+
+.time {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    transition: 200ms ease-in;
+    /* background-color: red; */
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+    flex: 1;
+    /* background-color: green; */
+    margin: 5vh;
+    border-radius: 20px;
+}
+
+.split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6em;
+}
+
+.log {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.log input {
+    padding: 3vh;
+    margin: 1vh;
+    border-radius: 1vh;
+    font-size: 1.4em;
+}
+
+.log * {
+    padding: 3vh;
+}
+
+.log button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 30%;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 2vh;
+    border: none;
+    background-color: rgb(177, 13, 46);
+    transition: 300ms;
+}
+
+.log {
+    display: none;
+    height: 0;
+}
+
+#esqueci{
+    color: rgb(177, 13, 46);
+    cursor: context-menu;
+    font-size: 1.1em;
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0%{
+        color: black;
+
+    }
+    50%{
+        color: rgb(177, 13, 46);
+        transform: scale(1.05);
+    }
+    100%{
+        color: black;
+
+    }
+}
+
+@media (max-width: 600px) {
+    .block{
+        font-size: 2em;
+        margin: 2.5vh;
+    }
+    .mainBlock{
+        width: 80%;
+        height: 20%;
+    }
+
+    .log input{
+        padding: 1vh;
+        font-size: 1.2em;
+    }
+  }
